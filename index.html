@@ -14,256 +14,266 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<img src="assets/images/Logo.png" alt="Logo" />
-						</div>
-						<div class="content">
-                            <div class="inner">
-                                <h1>Erik Forssell's</h1>
-                                <h2>Portfolio</h2>
-                                <p>An overview of the bigger games i've made.</p>
-                                <p>For more detail or any interest in the smaller projects i've done, please contact me:</p>
-                                <p>Erikeforssell@gmail.com</p>
-                            </div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#StarlitSeas">Starlit Seas</a></li>
-								<li><a href="#Parenthood">Parenthood</a></li>
-								<li><a href="#MondaySimulator">Monday Simulator</a></li>
-							</ul>
-						</nav>
-					</header>
+                <header id="header">
+                    <div class="logo">
+                        <img src="assets/images/Logo.jpg" alt="Logo" />
+                    </div>
+                    <div class="content">
+                        <div class="inner">
+                            <h1>Erik Forssell's</h1>
+                            <h2>Portfolio</h2>
+                            <p>An overview of the bigger games i've made.</p>
+                            <p>For more detail or any interest in the smaller projects i've done, please contact me:</p>
+                            <p>Erikeforssell@gmail.com</p>
+                        </div>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li><a href="#StarlitSeas"><img src="assets/images/StarlitSeas1.png" alt="Starlit Seas" /></a></li>
+                            <li><a href="#Parenthood"><img src="assets/images/parenthoodLogo.png" alt="Parenthood" /></a></li>
+                            <li><a href="#MondaySimulator"><img src="assets/images/monday_simulator.png" alt="Monday Simulator" /></a></li>
+                        </ul>
+                    </nav>
+
+
+                </header>
+
+
+
+
+
 
 				<!-- Main -->
 					<div id="main">
 
 
-						<article id="StarlitSeas">
-							<h2 class="major">Starlit Seas</h2>
-							<span class="image main"><img src="assets/images/StarlitSeas1.png" width="800" alt="Starlit Seas Screenshot" /></span>
+                        <article id="StarlitSeas">
+                            <h2 class="major">Starlit Seas</h2>
+                            <span class="image main"><img src="assets/images/StarlitSeas1.png" width="600" alt="Starlit Seas Screenshot" /></span>
 
-							<p><a href="https://yrgo-game-creator.itch.io/starlit-seas" target="_blank">Play Starlit Seas on Itch.io</a></p>
+                            <p><a href="https://yrgo-game-creator.itch.io/starlit-seas" target="_blank">Play Starlit Seas on Itch.io</a></p>
 
-							<br />
+                            <br />
+                            <h4>Engine: Unreal Engine 5 <br /> Development time: 8 weeks</h4>
+                            <br />
+                            <h3>Game Description</h3>
+                            <p>Starlit Seas is an atmospheric 3D platformer where you play as a lost soul finding their way to heaven with the guidance of whale spirits. The game offers an ethereal experience as you explore and follow these mystical creatures through the skies.</p>
 
-							<h3>Game Description</h3>
-							<p>Starlit Seas is an atmospheric 3D platformer where you play as a lost soul finding their way to heaven with the guidance of whale spirits. The game offers an ethereal experience as you explore and follow these mystical creatures through the skies.</p>
+                            <br />
 
-							<br />
+                            <h3>My Contributions During Development</h3>
 
-							<h3>My Contributions During Development</h3>
+                            <h4>The Whales' Path</h4>
+                            <p>The whales ended up being the most complicated part for me. The idea was simple: create a basic "AI" that moves along a route but can still move around the route to feel more natural.</p>
 
-							<h4>The Whales' Path</h4>
-							<p>The whales ended up being the most complicated part for me. The idea was simple: create a basic "AI" that moves along a route but can still move around the route to feel more natural.</p>
+                            <table>
+                                <tr>
+                                    <td>The Initial Idea</td>
+                                    <td>
+                                        <p>At first, I considered using Unreal Engine's built-in AI! However, there was a problem with this approach. The AI required a nav mesh that only registers potential paths on solid ground. I couldn't find any previous examples of using the built-in AI in the air either. Having an invisible ground didn't provide the flexibility I wanted, so this approach was quickly ruled out.</p>
+                                        <img src="assets/images/AI.gif" width="600" alt="Initial AI Approach" /><br />(I didn't have the correct whale model yet)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>An Alternative</td>
+                                    <td>
+                                        <p>Instead of using actual AI, I decided to use splines to have more control over the whales. To make it feel more natural, I created a system that allowed the whales to switch between different splines/routes seamlessly. Although I tried my best and got it to work 95% of the time, there were enough bugs, too many tasks left, and barely any time to complete it.</p>
+                                        <img src="assets/images/Transfer1.png" width="600" alt="First version of this system" /><br />
+                                        <img src="assets/images/Transfer2.png" width="600" alt="First version of this system" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>The Final Method</td>
+                                    <td>
+                                        <p>In the end, I decided to keep the whales on splines without any additional features. While this was disappointing, there wasn't enough time to implement more ideas.</p>
+                                        <img src="assets/images/splines.gif" width="600" alt="The whales following a spline" /><br />
+                                        <img src="assets/images/versions.png" width="600" alt="Different versions of the whales" />
+                                    </td>
+                                </tr>
+                            </table>
 
-							<table>
-								<tr>
-									<td>The Initial Idea</td>
-									<td>
-										<p>At first, I considered using Unreal Engine's built-in AI! However, there was a problem with this approach. The AI required a nav mesh that only registers potential paths on solid ground. I couldn't find any previous examples of using the built-in AI in the air either. Having an invisible ground didn't provide the flexibility I wanted, so this approach was quickly ruled out.</p>
-										<img src="assets/images/AI.gif" width="600" alt="Initial AI Approach" /><br />(I didn't have the correct whale model yet)
-									</td>
-								</tr>
-								<tr>
-									<td>An Alternative</td>
-									<td>
-										<p>Instead of using actual AI, I decided to use splines to have more control over the whales. To make it feel more natural, I created a system that allowed the whales to switch between different splines/routes seamlessly. Although I tried my best and got it to work 95% of the time, there were enough bugs, too many tasks left, and barely any time to complete it.</p>
-										<img src="assets/images/Transfer1.png" width="600" alt="First version of this system" /><br />
-										<img src="assets/images/Transfer2.png" width="600" alt="First version of this system" />
-									</td>
-								</tr>
-								<tr>
-									<td>The Final Method</td>
-									<td>
-										<p>In the end, I decided to keep the whales on splines without any additional features. While this was disappointing, there wasn't enough time to implement more ideas.</p>
-										<img src="assets/images/splines.gif" width="600" alt="The whales following a spline" /><br />
-										<img src="assets/images/versions.png" width="600" alt="Different versions of the whales" />
-									</td>
-								</tr>
-							</table>
+                            <details>
+                                <summary>List of Smaller Tasks I Completed for the Whales</summary>
+                                <ol>
+                                    <li>The blowhole boost that sprays water and launches the player.</li>
+                                    <li>Animation retargeting.</li>
+                                    <li>Troubleshooting various collision issues.</li>
+                                </ol>
+                            </details>
 
-							<details>
-								<summary>List of Smaller Tasks I Completed for the Whales</summary>
-								<ol>
-									<li>The blowhole boost that sprays water and launches the player.</li>
-									<li>Animation retargeting.</li>
-									<li>Troubleshooting various collision issues.</li>
-								</ol>
-							</details>
+                            <p>Links to Whale Blueprints:</p>
+                            <ul>
+                                <li><a href="https://blueprintue.com/blueprint/wnxxdpmd/" target="_blank">WhaleParent</a></li>
+                                <li><a href="https://blueprintue.com/blueprint/rpadtoge/" target="_blank">WhaleShark</a></li>
+                                <li><a href="https://blueprintue.com/blueprint/ux194k_4/" target="_blank">BlowholeWhale</a></li>
+                            </ul>
 
-							<p>Links to Whale Blueprints:</p>
-							<ul>
-								<li><a href="https://blueprintue.com/blueprint/wnxxdpmd/" target="_blank">WhaleParent</a></li>
-								<li><a href="https://blueprintue.com/blueprint/rpadtoge/" target="_blank">WhaleShark</a></li>
-								<li><a href="https://blueprintue.com/blueprint/ux194k_4/" target="_blank">BlowholeWhale</a></li>
-							</ul>
+                            <h4>The Intro Cinematic</h4>
+                            <p>Due to the high pressure on the artists, I decided to take on the task of creating the intro cinematic myself and experiment with CineCam in Unreal Engine. Although I'm somewhat happy with the result, it's not perfect, and I didn't have time to improve it further.</p>
 
-							<h4>The Intro Cinematic</h4>
-							<p>Due to the high pressure on the artists, I decided to take on the task of creating the intro cinematic myself and experiment with CineCam in Unreal Engine. Although I'm somewhat happy with the result, it's not perfect, and I didn't have time to improve it further.</p>
+                            <table>
+                                <tr>
+                                    <td>Where to Begin?</td>
+                                    <td>
+                                        <p>I wanted to create a first-person POV with realistic movement. Instead of animating every frame by hand, I used an app called CamTrackAR. This app allowed me to track my phone's movement by placing anchor points on the ground while filming, resulting in somewhat natural head movement.</p>
+                                        <img src="assets/images/CamTrack.png" width="600" alt="CamTrackAR" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>The Animation</td>
+                                    <td>
+                                        <p>For the animation where the player's hands appear as they wake up in a foreign place, I used a Mixamo animation. However, the skeletal mesh I received from the artist wasn't compatible, so I had to retarget the player's skeletal mesh to the Mixamo skeletal mesh.</p>
+                                        <img src="assets/images/Cinematic1.gif" width="500" alt="Animation for waking up" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Blinking</td>
+                                    <td>
+                                        <p>I also wanted to add some blinking effects to make it feel like the player had just woken up. I created a material that looks like eyelids around the camera and applied it to a post-process component attached to the skeletal mesh. Finally, I added a variable that could be adjusted to control the sphere mask, simulating the eyelids closing and opening.</p>
+                                        <img src="assets/images/Blinking.gif" width="600" alt="Blinking effect" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>The Final Product</td>
+                                    <td>
+                                        <p>Finally, I put it all together, and it looks like this:<br /> It's a bit longer and better looking in the actual game.</p>
+                                        <img src="assets/images/Cinematic2.gif" width="600" alt="Final intro cinematic" />
+                                    </td>
+                                </tr>
+                            </table>
 
-							<table>
-								<tr>
-									<td>Where to Begin?</td>
-									<td>
-										<p>I wanted to create a first-person POV with realistic movement. Instead of animating every frame by hand, I used an app called CamTrackAR. This app allowed me to track my phone's movement by placing anchor points on the ground while filming, resulting in somewhat natural head movement.</p>
-										<img src="assets/images/CamTrack.png" width="600" alt="CamTrackAR" />
-									</td>
-								</tr>
-								<tr>
-									<td>The Animation</td>
-									<td>
-										<p>For the animation where the player's hands appear as they wake up in a foreign place, I used a Mixamo animation. However, the skeletal mesh I received from the artist wasn't compatible, so I had to retarget the player's skeletal mesh to the Mixamo skeletal mesh.</p>
-										<img src="assets/images/Cinematic1.gif" width="500" alt="Animation for waking up" />
-									</td>
-								</tr>
-								<tr>
-									<td>Blinking</td>
-									<td>
-										<p>I also wanted to add some blinking effects to make it feel like the player had just woken up. I created a material that looks like eyelids around the camera and applied it to a post-process component attached to the skeletal mesh. Finally, I added a variable that could be adjusted to control the sphere mask, simulating the eyelids closing and opening.</p>
-										<img src="assets/images/Blinking.gif" width="600" alt="Blinking effect" />
-									</td>
-								</tr>
-								<tr>
-									<td>The Final Product</td>
-									<td>
-										<p>Finally, I put it all together, and it looks like this:<br /> It's a bit longer and better looking in the actual game.</p>
-										<img src="assets/images/Cinematic2.gif" width="600" alt="Final intro cinematic" />
-									</td>
-								</tr>
-							</table>
+                            <p>Links to Relevant Blueprints:</p>
+                            <ul>
+                                <li><a href="https://blueprintue.com/blueprint/c5bvtwnn/" target="_blank">BlinkingMaterial</a></li>
+                                <li><a href="https://blueprintue.com/blueprint/33l218--/" target="_blank">BlinkingBlueprint</a></li>
+                            </ul>
 
-							<p>Links to Relevant Blueprints:</p>
-							<ul>
-								<li><a href="https://blueprintue.com/blueprint/c5bvtwnn/" target="_blank">BlinkingMaterial</a></li>
-								<li><a href="https://blueprintue.com/blueprint/33l218--/" target="_blank">BlinkingBlueprint</a></li>
-							</ul>
+                            <h4>Jellyfish Enemies</h4>
+                            <p>During development, we realized that some type of obstacle was needed. One of the other programmers had created a jellyfish-like ribbon visual effect, but we weren't sure what to do with it. So I decided to turn it into an enemy.</p>
 
-							<h4>Jellyfish Enemies</h4>
-							<p>During development, we realized that some type of obstacle was needed. One of the other programmers had created a jellyfish-like ribbon visual effect, but we weren't sure what to do with it. So I decided to turn it into an enemy.</p>
+                            <table>
+                                <tr>
+                                    <td>The Straightforward Approach</td>
+                                    <td>
+                                        <p>To start, I made the jellyfish follow the player, so that when it got too close, the player would take damage—much like many other enemies in games.</p>
+                                        <img src="assets/images/Eel.gif" width="600" alt="Initial jellyfish approach" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Adding Electricity</td>
+                                    <td>
+                                        <p>The flaw with the previous approach was that in a dark, open sky, it became hard to see where the enemies were and how close they were. To make them more visible, I added lightning effects around the jellyfish.</p>
+                                        <img src="assets/images/ElectricEel.gif" width="600" alt="Jellyfish with lightning" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Changing It Up</td>
+                                    <td>
+                                        <p>Although the lightning helped, it still didn't fit the game we were trying to make, and the playtesters agreed. To address this, I repurposed the jellyfish into more of an immovable obstacle. Now, they move in a pattern with lightning between each other, creating different shapes depending on how the paths are structured. I also made them spin faster as the player gets closer.</p>
+                                        <img src="assets/images/Jellyfish.gif" width="600" alt="Final jellyfish obstacle" />
+                                    </td>
+                                </tr>
+                            </table>
 
-							<table>
-								<tr>
-									<td>The Straightforward Approach</td>
-									<td>
-										<p>To start, I made the jellyfish follow the player, so that when it got too close, the player would take damage—much like many other enemies in games.</p>
-										<img src="assets/images/Eel.gif" width="600" alt="Initial jellyfish approach" />
-									</td>
-								</tr>
-								<tr>
-									<td>Adding Electricity</td>
-									<td>
-										<p>The flaw with the previous approach was that in a dark, open sky, it became hard to see where the enemies were and how close they were. To make them more visible, I added lightning effects around the jellyfish.</p>
-										<img src="assets/images/ElectricEel.gif" width="600" alt="Jellyfish with lightning" />
-									</td>
-								</tr>
-								<tr>
-									<td>Changing It Up</td>
-									<td>
-										<p>Although the lightning helped, it still didn't fit the game we were trying to make, and the playtesters agreed. To address this, I repurposed the jellyfish into more of an immovable obstacle. Now, they move in a pattern with lightning between each other, creating different shapes depending on how the paths are structured. I also made them spin faster as the player gets closer.</p>
-										<img src="assets/images/Jellyfish.gif" width="600" alt="Final jellyfish obstacle" />
-									</td>
-								</tr>
-							</table>
+                            <p>Links to Relevant Blueprints:</p>
+                            <ul>
+                                <li><a href="https://blueprintue.com/blueprint/a53mtjgq/" target="_blank">Jellyfish_01</a></li>
+                                <li><a href="https://blueprintue.com/blueprint/wv68_grw/" target="_blank">JellyfishElectricity</a></li>
+                                <li><a href="https://blueprintue.com/blueprint/e8uqgz5r/" target="_blank">Jellyfish_02</a></li>
+                            </ul>
 
-							<p>Links to Relevant Blueprints:</p>
-							<ul>
-								<li><a href="https://blueprintue.com/blueprint/a53mtjgq/" target="_blank">Jellyfish_01</a></li>
-								<li><a href="https://blueprintue.com/blueprint/wv68_grw/" target="_blank">JellyfishElectricity</a></li>
-								<li><a href="https://blueprintue.com/blueprint/e8uqgz5r/" target="_blank">Jellyfish_02</a></li>
-							</ul>
+                            <h4>List of Smaller Things I Did</h4>
+                            <details>
+                                <summary>Fog</summary>
+                                <img src="assets/images/Fog.gif" width="600" alt="Fog effect" />
+                            </details>
 
-							<h4>List of Smaller Things I Did</h4>
-							<details>
-								<summary>Fog</summary>
-								<img src="assets/images/Fog.gif" width="600" alt="Fog effect" />
-							</details>
+                            <details>
+                                <summary>Scanning</summary>
+                                <img src="assets/images/Scanning.gif" width="600" alt="Scanning effect" />
+                                <p>As a fun little end credits joke, I suggested to the group that we scan everyone in silly poses and put ourselves inside the game using Polycam. (I'm the one by the computer)</p>
+                            </details>
 
-							<details>
-								<summary>Scanning</summary>
-								<img src="assets/images/Scanning.gif" width="600" alt="Scanning effect" />
-								<p>As a fun little end credits joke, I suggested to the group that we scan everyone in silly poses and put ourselves inside the game using Polycam. (I'm the one by the computer)</p>
-							</details>
+                            <details>
+                                <summary>Optimization</summary>
+                                <p>Due to performance issues, I tried to optimize as much as possible by reducing foliage, adjusting culling, tweaking LOD, using Nanite, and so on.</p>
 
-							<details>
-								<summary>Optimization</summary>
-								<p>Due to performance issues, I tried to optimize as much as possible by reducing foliage, adjusting culling, tweaking LOD, using Nanite, and so on.</p>
-
-							</details>
-						</article>
+                            </details>
+                        </article>
 
 
 
-						<article id="Parenthood">
-							<h2 class="major">Parenthood</h2>
-							<img src="assets/images/parenthoodLogo.png" width="400" alt="Parenthood Logo" />
-							<p><a href="https://yrgo-game-creator.itch.io/parenthood">Play on Itch.io</a></p>
-							<br />
+                        <article id="Parenthood">
+                            <h2 class="major">Parenthood</h2>
+                            <img src="assets/images/parenthoodLogo.png" width="400" alt="Parenthood Logo" />
+                            <p><a href="https://yrgo-game-creator.itch.io/parenthood">Play on Itch.io</a></p>
+                            <br />
+                            <h4>Engine: Unity <br /> Development time: 8 weeks</h4>
+                            <br />
 
-							<h3>Game Description</h3>
-							<p>PARENTHOOD explores the need to protect what is innocent and vulnerable. It tells you the story of love and growth, without a single word spoken.</p>
-							<br />
+                            <h3>Game Description</h3>
+                            <p>PARENTHOOD explores the need to protect what is innocent and vulnerable. It tells you the story of love and growth, without a single word spoken.</p>
+                            <br />
 
-							<h3>Personal Comment</h3>
-							<p>I'm not very proud of the level of programming that I did in this game. However, it was very early in my coding journey and it was essential for learning.</p>
-							<br />
+                            <h3>Personal Comment</h3>
+                            <p>I'm not very proud of the level of programming that I did in this game. However, it was very early in my coding journey and it was essential for learning.</p>
+                            <br />
 
-							<h2>My Contributions During Development</h2>
+                            <h2>My Contributions During Development</h2>
 
-							<h3>The Child</h3>
-							<table>
-								<tr>
-									<td><strong>A sketch of obstacles</strong></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>
-										<figure>
-											<img src="assets/images/ParenthoodSketch.png" width="400" alt="Sketch of Obstacles" />
-										</figure>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										In the beginning, it was expected that the child can move properly and expect help from you, the parent, just like in the sketch made by Axel Björkman. <br /><br />
-										Some of the obstacles are:<br />
-										- Jump up on ledge with help from parent.<br />
-										- Stop at crushers giving the parent a chance to save the child.<br />
-										- And child running away through a passage giving the parent a limited time to complete a task.
-									</td>
-								</tr>
-							</table>
-							<br /><br />
+                            <h3>The Child</h3>
+                            <table>
+                                <tr>
+                                    <td><strong>A sketch of obstacles</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <figure>
+                                            <img src="assets/images/ParenthoodSketch.png" width="400" alt="Sketch of Obstacles" />
+                                        </figure>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        In the beginning, it was expected that the child can move properly and expect help from you, the parent, just like in the sketch made by Axel Björkman. <br /><br />
+                                        Some of the obstacles are:<br />
+                                        - Jump up on ledge with help from parent.<br />
+                                        - Stop at crushers giving the parent a chance to save the child.<br />
+                                        - And child running away through a passage giving the parent a limited time to complete a task.
+                                    </td>
+                                </tr>
+                            </table>
+                            <br /><br />
 
-							<h3>The Ledges</h3>
-							<table>
-								<tr>
-									<td>As quite a newbie to coding, the first idea that came to mind was to use RayCast to decide if the child was close enough to the step and after that use AddForce to make the child leap upwards over and over so that eventually the child clears the stairs. This of course is very flawed in many ways. The steps in every map varied in size making it difficult to predict the amount of force needed. It also could make the child stuck if it lands too far into each step.</td>
-								</tr>
-								<tr>
-									<td><strong>Simpler but better</strong></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td>
-										<figure>
-											<img src="assets/images/LedgeJump.gif" width="400" alt="Ledge Jump Animation" />
-											<figcaption>Ledge Jump Animation</figcaption>
-										</figure>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										There were some more versions before this but in the end I decided that simpler was better and laid out points for each landing per each step. There were some minor things that needed fixing as well. For example, the child's random jumping needed to be stopped before the approach of the steps.
-									</td>
-								</tr>
-							</table>
+                            <h3>The Ledges</h3>
+                            <table>
+                                <tr>
+                                    <td>As quite a newbie to coding, the first idea that came to mind was to use RayCast to decide if the child was close enough to the step and after that use AddForce to make the child leap upwards over and over so that eventually the child clears the stairs. This of course is very flawed in many ways. The steps in every map varied in size making it difficult to predict the amount of force needed. It also could make the child stuck if it lands too far into each step.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Simpler but better</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <figure>
+                                            <img src="assets/images/LedgeJump.gif" width="400" alt="Ledge Jump Animation" />
+                                            <figcaption>Ledge Jump Animation</figcaption>
+                                        </figure>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        There were some more versions before this but in the end I decided that simpler was better and laid out points for each landing per each step. There were some minor things that needed fixing as well. For example, the child's random jumping needed to be stopped before the approach of the steps.
+                                    </td>
+                                </tr>
+                            </table>
 
-							<details>
-								<summary>LedgeJumpScript</summary>
-								<pre>
-								<code>
+                            <details>
+                                <summary>LedgeJumpScript</summary>
+                                <pre>
+                                <code>
     private Follow follow;
     private SquishAndStretch squishAndStretch;
     private SpriteRenderer sprite;
@@ -393,30 +403,30 @@
     }
         </code>
         </pre>
-							</details>
-							<br /><br />
+                            </details>
+                            <br /><br />
 
-							<h3>Assisted Jumps</h3>
-							<table>
-								<tr>
-									<td>
-										<figure>
-											<img src="assets/images/LedgeJump2.gif" width="400" alt="Assisted Jump Animation" />
-											<figcaption>Assisted Jump Animation</figcaption>
-										</figure>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Similar to the steps before, there was another step for the child where it was too high for it to reach. For the child to make it over, the child needed help from the player/parent. <br /><br />
-										Before this task, we were taught what DOTween was, which helped immensely with the solution. For this task, I decided to check if the parent was next to the wall and then getting the top position of the parent's collider. With that, I made the child "jump" from its original position to the top of the parent and after that using a bit of AddForce to make it completely over the ledge.
-									</td>
-								</tr>
-							</table>
-							<details>
-								<summary>AssistedJumpScript</summary>
-								<pre>
-								<code>
+                            <h3>Assisted Jumps</h3>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <figure>
+                                            <img src="assets/images/LedgeJump2.gif" width="400" alt="Assisted Jump Animation" />
+                                            <figcaption>Assisted Jump Animation</figcaption>
+                                        </figure>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Similar to the steps before, there was another step for the child where it was too high for it to reach. For the child to make it over, the child needed help from the player/parent. <br /><br />
+                                        Before this task, we were taught what DOTween was, which helped immensely with the solution. For this task, I decided to check if the parent was next to the wall and then getting the top position of the parent's collider. With that, I made the child "jump" from its original position to the top of the parent and after that using a bit of AddForce to make it completely over the ledge.
+                                    </td>
+                                </tr>
+                            </table>
+                            <details>
+                                <summary>AssistedJumpScript</summary>
+                                <pre>
+                                <code>
     private Rigidbody2D rb;
     private MotherMovement motherMovement;
     private ChildJumpOverSmall childJumpOverSmall;
@@ -535,27 +545,27 @@
 
         </code>
         </pre>
-							</details>
-							<br /><br />
-							<h3>Crushers</h3>
-							<table>
-								<tr>
-									<td><strong>Protecting the child</strong></td>
-									<td></td>
-								</tr>
-								<tr>
-									<td><img src="assets/images/Crusher.gif" width="500" alt="Crusher Animation" /></td>
-								</tr>
-								<tr>
-									<td>
-										We also wanted an obstacle that was dangerous instead of a simple step that the child can't jump over. Instead of adding something brutal like blades, a simple crusher like in Mario seemed like a good option. It was quite tricky to make it feel satisfying to save the child but I'm glad with the result.
-									</td>
-								</tr>
-							</table>
-							<details>
-								<summary>CrusherScript</summary>
-								<pre>
-								<code>
+                            </details>
+                            <br /><br />
+                            <h3>Crushers</h3>
+                            <table>
+                                <tr>
+                                    <td><strong>Protecting the child</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><img src="assets/images/Crusher.gif" width="500" alt="Crusher Animation" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        We also wanted an obstacle that was dangerous instead of a simple step that the child can't jump over. Instead of adding something brutal like blades, a simple crusher like in Mario seemed like a good option. It was quite tricky to make it feel satisfying to save the child but I'm glad with the result.
+                                    </td>
+                                </tr>
+                            </table>
+                            <details>
+                                <summary>CrusherScript</summary>
+                                <pre>
+                                <code>
     private Rigidbody2D rb;
     public GameObject pointA;
     public GameObject pointB;
@@ -639,54 +649,54 @@
     }
         </code>
         </pre>
-							</details>
-							<br /><br />
+                            </details>
+                            <br /><br />
 
-							<h3>"Lonely" Shader</h3>
-							<table>
-								<tr>
-									<td><strong>First time using shaders</strong></td>
-									<td></td>
-								</tr>
-								<tr>
+                            <h3>"Lonely" Shader</h3>
+                            <table>
+                                <tr>
+                                    <td><strong>First time using shaders</strong></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
 
-									<td><img src="assets/images/Lonely.gif" width="500" alt="Lonely Shader Animation" /></td>
-								</tr>
-								<tr>
-									<td>
-										Although this shader isn't Shadertoy.com level it was enough to give the message to the player that they should go back. <br /><br /> It calculates the position of the pixels from the origin and with a variable I increase or decrease the size of the mask I apply. A simple circle is a bit boring so I add some noise with a time node connected to the scale of the noise creating some variation.
-									</td>
-								</tr>
-							</table>
-							<details>
-								<summary>Shader Graph</summary>
-								<img src="assets/images/Shader.png" width="500" alt="Shader Graph" />
-							</details>
+                                    <td><img src="assets/images/Lonely.gif" width="500" alt="Lonely Shader Animation" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Although this shader isn't Shadertoy.com level it was enough to give the message to the player that they should go back. <br /><br /> It calculates the position of the pixels from the origin and with a variable I increase or decrease the size of the mask I apply. A simple circle is a bit boring so I add some noise with a time node connected to the scale of the noise creating some variation.
+                                    </td>
+                                </tr>
+                            </table>
+                            <details>
+                                <summary>Shader Graph</summary>
+                                <img src="assets/images/Shader.png" width="500" alt="Shader Graph" />
+                            </details>
 
-							<br /><br />
+                            <br /><br />
 
-							<h3>Cinematic Bars and Transition</h3>
-							<table>
-								<tr>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr>
+                            <h3>Cinematic Bars and Transition</h3>
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
 
-									<td><img src="assets/images/Transition.gif" width="500" alt="Transition Animation" /></td>
-								</tr>
-								<tr>
-									<td>
-										This one was quite simple. I created two 2D blocks and simply moved them up or down in an animation depending on if the cinematic started or ended. <br /><br /> As for the transition from cinematic to gameplay, I had two different game objects for each character, two for the child and two for the parent. Right before the cutscene ended I made sure the "real" parent and child was in the position of the cutscene parent and child and then seamlessly switched active state of the two and the cameras.
-									</td>
-								</tr>
-							</table>
+                                    <td><img src="assets/images/Transition.gif" width="500" alt="Transition Animation" /></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        This one was quite simple. I created two 2D blocks and simply moved them up or down in an animation depending on if the cinematic started or ended. <br /><br /> As for the transition from cinematic to gameplay, I had two different game objects for each character, two for the child and two for the parent. Right before the cutscene ended I made sure the "real" parent and child was in the position of the cutscene parent and child and then seamlessly switched active state of the two and the cameras.
+                                    </td>
+                                </tr>
+                            </table>
 
 
-							<details>
-								<summary>CinematicBarsController</summary>
-								<pre>
-								<code>
+                            <details>
+                                <summary>CinematicBarsController</summary>
+                                <pre>
+                                <code>
     public static CinematicBarsController Instance { get; private set; }
     private GameObject cinematicBarContainerGO;
     private Animator animator;
@@ -727,19 +737,19 @@
     }
         </code>
         </pre>
-							</details>
+                            </details>
                             <br /><br />
 
-							<h3>List of Smaller Things I Did</h3>
-							<details>
-								<summary>Camera Transitions</summary>
-								<img src="assets/images/Camera.gif" width="600" alt="Camera Transitions" /><br />
-							</details>
+                            <h3>List of Smaller Things I Did</h3>
+                            <details>
+                                <summary>Camera Transitions</summary>
+                                <img src="assets/images/Camera.gif" width="600" alt="Camera Transitions" /><br />
+                            </details>
 
-							<details>
-								<summary>GrabChild (Scraped)</summary>
-								<pre>
-								<code>
+                            <details>
+                                <summary>GrabChild (Scraped)</summary>
+                                <pre>
+                                <code>
     public GrabArea grabArea;
     private MotherMovement motherMovement;
     public GameObject child;
@@ -830,8 +840,8 @@
     }
         </code>
         </pre>
-							</details>
-						</article>
+                            </details>
+                        </article>
 
 
 
